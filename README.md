@@ -1,79 +1,77 @@
-# Asynchronous-programming-Practical-task-2
+# PrimeThreads
 
-Java-програма для знаходження простих чисел до заданого числа `N` у багатопоточному режимі. 
+A Java program for finding prime numbers up to a specified number N using multithreading.
 
-## Опис
+## Description
 
-Ця програма:
-- Знаходить усі прості числа до числа `N`, заданого користувачем.
-- Використовує багатопоточність для обробки діапазонів чисел.
-- Реалізована з використанням `Callable`, `Future` та `CopyOnWriteArrayList` для асинхронної обробки даних.
-- Включає обчислення часу виконання.
+This program:
+- Finds all prime numbers up to the user-specified number N.
+- Uses multithreading to process ranges of numbers.
+- Is implemented using Callable, Future, and CopyOnWriteArrayList for asynchronous data processing.
+- Includes calculation of execution time.
 
-## Вимоги
+## Requirements
 
-- Java 8 або новіша версія.
+- Java 8 or newer.
 
-## Запуск
+## Running
 
-### **Компіляція та запуск програми**
+### Compiling and Running the Program
 
-1. **Клонування репозиторію**:
+1. Clone the repository:
    ```bash
    git clone https://github.com/username/repo-name.git
    cd repo-name
    ```
 
-2.	**Компілікація програми**:
-    ```bash
-    javac PrimeNumbersFinder.java
-    ```
+2. Compile the program:
+   ```bash
+   javac PrimeNumbersFinder.java
+   ```
 
-3.	**Запуск програми**:
-    ```bash
-    java PrimeNumbersFinder
-    ```
+3. Run the program:
+   ```bash
+   java PrimeNumbersFinder
+   ```
 
-4.	Введіть дані:
-	- Число N у межах [0; 1000].
-	- Кількість потоків.
+4. Enter data:
+   - Number N in the range [0; 1000].
+   - Number of threads.
 
-5.	Програма виведе:
-    - Усі знайдені прості числа.
-    - Час виконання у мілісекундах.
+5. The program will output:
+   - All found prime numbers.
+   - Execution time in milliseconds.
 
+### Compiling and Running Tests
 
-### **Компіляція та запуск тестів**
+1. Compile the tests:
+   ```bash
+   javac PrimeNumbersFinderTest.java
+   ```
 
-1.	Компілікація тестів:
+2. Run the tests:
+   ```bash
+   java PrimeNumbersFinderTest
+   ```
 
-    ```bash
-    javac PrimeNumbersFinderTest.java
-    ```
+3. The test program will automatically check several input scenarios and show whether they were successful.
 
-2.	Запуск тестів:
-    ```bash
-    java PrimeNumbersFinderTest
-    ```
-
-3.	Тестова програма автоматично перевірить кілька вхідних сценаріїв і покаже, чи були вони успішно виконані.
-
-**Приклад роботи**:
+**Example Output:**
 ```bash
-Тест НЕ пройдено: 10
+Test FAILED: 10
 2
-Очікувано: [2, 3, 5, 7]
-Отримано: []
-Тест пройдено: 1
+Expected: [2, 3, 5, 7]
+Received: []
+Test PASSED: 1
 1
-Тест пройдено: 0
+Test PASSED: 0
 1
-Тест НЕ пройдено: 20
+Test FAILED: 20
 4
-Очікувано: [2, 3, 5, 7, 11, 13, 17, 19]
-Отримано: []
-Тест пройдено: -1
+Expected: [2, 3, 5, 7, 11, 13, 17, 19]
+Received: []
+Test PASSED: -1
 2
-Тест пройдено: 10
+Test PASSED: 10
 0
 ```
